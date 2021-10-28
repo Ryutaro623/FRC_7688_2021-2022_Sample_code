@@ -1,2 +1,2 @@
-# FRC_7688_2021-2022_Sample_code
+# FRC 7688 2021-2022 Sample code
 Sample codes for beginners

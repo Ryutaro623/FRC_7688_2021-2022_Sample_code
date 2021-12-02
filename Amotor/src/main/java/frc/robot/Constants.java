@@ -12,4 +12,12 @@ package frc.robot;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+    public final static double MULTI(double speed, double sensitivity){
+        double out_put = Math.pow(speed, 3)*sensitivity+(1-sensitivity)*speed;
+        return out_put;
+
+    }
+    public final static double SENSITIVITY = 1;
+
+}

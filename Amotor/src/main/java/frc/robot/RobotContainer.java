@@ -23,7 +23,7 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final Joystick joystick = new Joystick(0);
-  private final JoystickButton x_button = new JoystickButton(joystick, 3);
+  private final JoystickButton x_button = new JoystickButton(joystick, 5);
   private final Motor motor = new Motor();
   private final Drivemotor Dmotor = new Drivemotor(motor);
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
@@ -43,7 +43,7 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    x_button.whenPressed(Dmotor);
+    x_button.whileHeld(Dmotor);
   }
 
   /**

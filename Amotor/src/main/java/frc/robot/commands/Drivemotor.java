@@ -4,11 +4,14 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
 import frc.robot.subsystems.Motor;
 
 public class Drivemotor extends CommandBase {
   /** Creates a new Drivemotor. */
+  private final Joystick joystick = new Joystick(0);
   private final Motor mt;
   public Drivemotor(Motor mtt) {
     mt = mtt;
@@ -23,7 +26,7 @@ public class Drivemotor extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    mt.Drive(0.5);
+    mt.Drive(Constants.MULTI(joystick.getRawAxis(5), Constants.SENSITIVITY));
   }
 
   // Called once the command ends or is interrupted.

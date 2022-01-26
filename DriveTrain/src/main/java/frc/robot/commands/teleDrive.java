@@ -20,12 +20,16 @@ public class teleDrive extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+    m_drivetrain.reset_Encoder();
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drivetrain.drive(joystick.getRawAxis(5), joystick.getRawAxis(0));
+    m_drivetrain.drive(joystick.getRawAxis(5)*-0.5, joystick.getRawAxis(0)*0.5);
+    System.out.println(m_drivetrain.get_average_distance());
+
   }
 
   // Called once the command ends or is interrupted.

@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Motor extends SubsystemBase {
   /** Creates a new Motor. */
-  private final TalonSRX motor = new TalonSRX(2);
+  private final TalonSRX motor = new TalonSRX(5);
   public Motor() {}
 
   public void Drive(double speed){

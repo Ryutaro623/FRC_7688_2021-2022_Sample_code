@@ -27,8 +27,9 @@ public class teleDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drivetrain.drive(joystick.getRawAxis(5)*-0.5, joystick.getRawAxis(0)*0.5);
-    System.out.println(m_drivetrain.get_average_distance());
+    m_drivetrain.drive(joystick.getRawAxis(5)*-0.8, joystick.getRawAxis(0)*0.5);
+    System.out.println("y-axis5 "+joystick.getRawAxis(5));
+    System.out.println("y-axis1 "+joystick.getRawAxis(1));
 
   }
 

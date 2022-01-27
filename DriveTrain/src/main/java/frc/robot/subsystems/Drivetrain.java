@@ -4,7 +4,6 @@
 
 package frc.robot.subsystems;
 
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 
@@ -70,6 +69,10 @@ public class Drivetrain extends SubsystemBase {
 
   public double get_average_distance(){
     return ((leftencoder.getDistance()+rightencoder.getDistance())/2);
+
+  }
+  public double Diff_distance(){
+    return leftencoder.getDistance()-rightencoder.getDistance();
   }
 
 

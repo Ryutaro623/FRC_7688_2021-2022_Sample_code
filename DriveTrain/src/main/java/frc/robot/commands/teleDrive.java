@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.controller.PIDController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Drivetrain;
 
@@ -27,9 +28,8 @@ public class teleDrive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drivetrain.drive(joystick.getRawAxis(5)*-0.8, joystick.getRawAxis(0)*0.5);
-    System.out.println("y-axis5 "+joystick.getRawAxis(5));
-    System.out.println("y-axis1 "+joystick.getRawAxis(1));
+    m_drivetrain.drive(joystick.getRawAxis(1)*-0.8, joystick.getRawAxis(4)*0.5);
+    System.out.println(m_drivetrain.get_average_distance());
 
   }
 

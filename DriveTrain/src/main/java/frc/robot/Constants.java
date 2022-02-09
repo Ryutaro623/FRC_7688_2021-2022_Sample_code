@@ -34,8 +34,8 @@ public final class Constants {
     public static final int[] LEFT_ENCODER= new int[]{0,1};
     public static final int[] RIGHT_ENCODER = new int[]{2,3};
 
-    public static final double WHEELDIAMETERCM = 15.24*Math.PI;
-    public static final double DISTENCEPERPULS = WHEELDIAMETERCM/2056;
+    public static final double WHEELPERIMETERCM = 15.24*Math.PI;
+    public static final double DISTENCEPERPULS = WHEELPERIMETERCM/2048;
 
 
     public static final double SENSITYVITY(double speed,double sen,double highest_output){
